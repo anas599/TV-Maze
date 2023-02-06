@@ -1,13 +1,22 @@
-header {
+body {
+  margin: 0;
+}
+
+.navigation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.navMenu {
+.navigation > ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   gap: 15px;
+}
+
+.footer-container {
+  padding: 15px;
+  border: 1px solid gray;
 }
