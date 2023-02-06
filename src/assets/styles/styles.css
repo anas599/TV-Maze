@@ -1,3 +1,13 @@
-h1 {
-  color: blueviolet;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 15px;
 }
