@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .navigation {
@@ -48,13 +49,45 @@ body {
   display: none;
 }
 
-.image-container {
+.modal-head-container {
   display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.movie-img-container {
+  position: relative;
   justify-content: center;
 }
 
 .movie-img {
   width: 300px;
+  border-radius: 25px;
+}
+
+.movie-infos-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 93%;
+}
+
+.movie-img-infos {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-infos {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.movie-infos:hover {
+  color: wheat;
+  background-color: black;
 }
 
 .close-icon-container {
