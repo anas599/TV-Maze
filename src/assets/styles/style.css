@@ -113,3 +113,33 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+
+form button {
+  padding: 15px 30px;
+  border-radius: 15px;
+  border: 1px solid rgb(255, 192, 74);
+  color: rgb(255, 166, 0);
+  background-color: antiquewhite;
+}
+
+form > div {
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 90%;
+  padding: 17px 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(255, 192, 74);
+}
+
+input,
+textarea:focus {
+  outline: none;
+  border: 1px solid rgb(255, 166, 0);
+}
+
+::placeholder {
+  font-style: italic;
+}
