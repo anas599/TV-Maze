@@ -29,7 +29,6 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
   background-color: #1617174d;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
@@ -39,10 +38,12 @@ body {
 .modal-content {
   position: relative;
   max-width: 800px;
+  max-height: 90vh;
   border-radius: 15px;
   padding: 25px;
   margin-inline: auto;
   background-color: aliceblue;
+  overflow-y: scroll;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -112,6 +113,57 @@ body {
   background-color: burlywood;
   padding: 10px;
   border-radius: 5px;
+}
+
+.comments-list-add-comment {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.list {
+  margin-top: 25px;
+}
+
+.list > li {
+  display: flex;
+  padding: 15px 15px;
+  background-color: rgb(255, 244, 228);
+  border-radius: 15px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.img-name {
+  display: flex;
+  flex: 2;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+
+.big {
+  font-weight: 800;
+}
+
+.add-score {
+  width: 300px;
+}
+
+.add-score > h2 {
+  margin: 12px 0 35px 0;
+  color: #3d2900;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 8px;
 }
 
 form button {
