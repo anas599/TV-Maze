@@ -96,7 +96,7 @@ body {
   max-width: 450px;
   margin-inline: auto;
   text-align: center;
-  background-color: burlywood;
+  background-color: white;
   padding: 15px;
   border-radius: 15px;
 }
@@ -121,13 +121,19 @@ body {
   padding: 15px;
 }
 
+.comment-list {
+  flex: 2;
+}
+
 .list {
   margin-top: 25px;
+  padding-left: 0;
+  margin-right: 15px;
 }
 
 .list > li {
   display: flex;
-  padding: 15px 15px;
+  padding: 10px 10px;
   background-color: rgb(255, 244, 228);
   border-radius: 15px;
   align-items: center;
