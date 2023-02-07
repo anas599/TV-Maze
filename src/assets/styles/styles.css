@@ -52,3 +52,11 @@ body {
   justify-content: space-between;
   padding-bottom: 20px;
 }
+.likes, .likes-1,
+.likes-2,
+.likes-3,
+.likes-4,
+.likes-5,
+.likes-6{
+  font-size: 10px;
+}
