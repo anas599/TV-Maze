@@ -17,6 +17,10 @@ body {
   padding-right: 40px;
 }
 
+.logo {
+  list-style: none;
+}
+
 .footer-container {
   padding: 15px;
   border: 1px solid gray;
