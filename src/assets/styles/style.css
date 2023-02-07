@@ -91,10 +91,13 @@ body {
 }
 
 .movie-infos {
-  margin-top: 25px;
+  margin-top: 35px;
   max-width: 450px;
   margin-inline: auto;
   text-align: center;
+  background-color: burlywood;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 .language-rating {
