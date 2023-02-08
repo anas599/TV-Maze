@@ -1,10 +1,11 @@
 import axios from 'axios';
+const API_ID = 'EiwHkAoBSluksl1w8A5K';
 
 const showsList = document.querySelector('.shows-list');
 const baseURL = 'https://api.tvmaze.com/shows/';
 const modal = document.querySelector('.modal');
 
-const popupHtml = (language, name, rating, genres, image, premiered) => {
+const popupHtml = (id, language, name, rating, genres, image, premiered) => {
   modal.innerHTML = '';
 
   const modalContent = document.createElement('div');
@@ -45,7 +46,7 @@ const popupHtml = (language, name, rating, genres, image, premiered) => {
                 <div class="img-name">
                   <span>Username</span>
                 </div>
-                <span class="">This is the comment i add for testing purpose</span>
+                <span class="comment-text">This is the comment i add for testing purpose</span>
               </li>
             </ul>
           </div>
@@ -54,6 +55,9 @@ const popupHtml = (language, name, rating, genres, image, premiered) => {
             <form id="form">
               <div>
                 <input required type="text" name="username" id="username" placeholder="Your name">
+              </div>
+              <div>
+                <input type="hidden" name="id" id="movie-id" value="${id}">
               </div>
               <div>
                 <textarea required name="comment" id="comment" placeholder="Add your comment" rows="6"></textarea>
@@ -71,13 +75,13 @@ const popupHtml = (language, name, rating, genres, image, premiered) => {
   modal.classList.toggle('hide');
 };
 
-const getPopupInfos = async (id) => {
-  const url = baseURL + id;
+const getPopupInfos = async (movieId) => {
+  const url = baseURL + movieId;
   const { data } = await axios.get(url);
   const {
-    language, rating, name, genres, image, premiered,
+    id, language, rating, name, genres, image, premiered,
   } = data;
-  popupHtml(language, name, rating, genres, image, premiered);
+  popupHtml(id, language, name, rating, genres, image, premiered);
 };
 
 const showPopup = async (id) => {

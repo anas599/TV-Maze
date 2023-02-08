@@ -141,20 +141,36 @@ body {
   position: absolute;
   right: 15px;
   top: 15px;
-  background-color: burlywood;
+  background-color: rgb(252, 232, 204);
   padding: 10px;
   border-radius: 5px;
   z-index: 10;
+  outline: 0;
+  border: 0;
+}
+
+.close-icon-container:hover {
+  background-color: burlywood;
 }
 
 .comments-list-add-comment {
-  display: flex;
-  justify-content: space-between;
   padding: 15px;
 }
 
 .comment-list {
-  flex: 2;
+  text-align: center;
+  max-width: 450px;
+  margin-inline: auto;
+}
+
+.comment-list li {
+  font-size: 12px;
+}
+
+.add-comment {
+  text-align: center;
+  max-width: 450px;
+  margin-inline: auto;
 }
 
 .list {
@@ -200,7 +216,7 @@ body {
 
 .buttonContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-right: 8px;
 }
 
