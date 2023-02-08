@@ -147,6 +147,7 @@ body {
   z-index: 10;
   outline: 0;
   border: 0;
+  cursor: pointer;
 }
 
 .close-icon-container:hover {
@@ -226,6 +227,13 @@ form button {
   border: 1px solid rgb(255, 192, 74);
   color: rgb(255, 166, 0);
   background-color: antiquewhite;
+  cursor: pointer;
+}
+
+form button:hover {
+  border: 1px solid rgb(255, 192, 74);
+  background-color: burlywood;
+  color: antiquewhite;
 }
 
 form > div {
