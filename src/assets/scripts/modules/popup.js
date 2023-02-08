@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addComment } from './comments';
+import { addComment, showComments } from './comments';
 
 const showsList = document.querySelector('.shows-list');
 const baseURL = 'https://api.tvmaze.com/shows/';
@@ -41,13 +41,6 @@ const popupHtml = (id, language, name, rating, genres, image, premiered) => {
           <div class="comment-list">
             <h4>Comment ()</h4>
             <ul class="list">
-              <li>
-                <span class="big">1</span>
-                <div class="img-name">
-                  <span>Username</span>
-                </div>
-                <span class="comment-text">This is the comment i add for testing purpose</span>
-              </li>
             </ul>
           </div>
           <div class="add-comment">
@@ -72,6 +65,7 @@ const popupHtml = (id, language, name, rating, genres, image, premiered) => {
   `;
 
   modal.appendChild(modalContent);
+  showComments(id, modal);
   modal.classList.toggle('hide');
 };
 
