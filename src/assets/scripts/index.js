@@ -6,3 +6,4 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import './get-shows-api.js';
 import './fetchLikes-API.js';
 import './likePlus-API.js';
+import './Counter.js';
