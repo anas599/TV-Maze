@@ -40,6 +40,7 @@ const showComments = async (id, modal) => {
       li.innerHTML = commentHtml(creationDate, username, comment);
       commentContainer.appendChild(li);
     });
+    return commentContainer;
   } catch (error) {
     return null;
   }
