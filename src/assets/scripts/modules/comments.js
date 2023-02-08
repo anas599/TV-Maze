@@ -50,6 +50,7 @@ const getComments = async (id) => {
   } catch (error) {
     return error;
   }
+  return [];
 };
 
 const showComments = async (id, modal) => {

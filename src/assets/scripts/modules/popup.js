@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { addComment, showComments } from './comments';
+import { addComment, showComments } from './comments.js';
 
 const showsList = document.querySelector('.shows-list');
 const baseURL = 'https://api.tvmaze.com/shows/';
