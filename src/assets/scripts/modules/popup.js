@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_ID = 'EiwHkAoBSluksl1w8A5K';
+import { addComment } from './comments';
 
 const showsList = document.querySelector('.shows-list');
 const baseURL = 'https://api.tvmaze.com/shows/';
@@ -95,12 +95,14 @@ const showPopupHandler = (target) => {
 
 showsList.addEventListener('click', (e) => {
   const { target } = e;
-  if (target.innerText === 'Comments') return showPopupHandler(target);
+  if (target.innerText !== 'Comments') return null;
+  return showPopupHandler(target);
 });
 
 const hidePopup = () => modal.classList.toggle('hide');
 
 modal.addEventListener('click', (e) => {
   const { target } = e;
-  if(target?.innerText === 'close') hidePopup();
+  if (target?.innerText === 'close') hidePopup();
+  if (target?.innerText === 'Submit') addComment(e);
 });
