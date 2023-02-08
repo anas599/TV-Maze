@@ -33,13 +33,19 @@ const showComments = async (id, modal) => {
   try {
     const comments = await getComments(id) || [];
     const commentContainer = modal.firstChild.children[3].children[0].children[1];
+    const commentCount = modal.firstChild.children[3].children[0].children[0];
+    let countComment = 0;
 
     commentContainer.innerHtml = '';
     comments.forEach(({ creation_date: creationDate, username, comment }) => {
       const li = document.createElement('li');
       li.innerHTML = commentHtml(creationDate, username, comment);
       commentContainer.appendChild(li);
+      countComment += 1;
     });
+
+    commentCount.innerText = `Comment (${countComment})`;
+    console.log(commentCount);
     return commentContainer;
   } catch (error) {
     return null;
