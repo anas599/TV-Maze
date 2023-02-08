@@ -39,7 +39,7 @@ const popupHtml = (id, language, name, rating, genres, image, premiered) => {
         </div>
         <div class="comments-list-add-comment">
           <div class="comment-list">
-            <h4>Comment ()</h4>
+            <h4></h4>
             <ul class="list">
             </ul>
           </div>
