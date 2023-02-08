@@ -98,5 +98,5 @@ const hidePopup = () => modal.classList.toggle('hide');
 modal.addEventListener('click', (e) => {
   const { target } = e;
   if (target?.innerText === 'close') hidePopup();
-  if (target?.innerText === 'Submit') addComment(e);
+  if (target?.innerText === 'Submit') addComment(e, modal);
 });
