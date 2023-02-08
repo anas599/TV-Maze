@@ -1,4 +1,6 @@
-async function likePlus(itemId) {
+import fetchLikes from './fetchLikes-API.js';
+
+async function likePlus(itemId, index, selector) {
   await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EiwHkAoBSluksl1w8A5K/likes',
     {
@@ -11,13 +13,13 @@ async function likePlus(itemId) {
       },
     },
   ).then(() => {
-    // eslint-disable-next-line no-restricted-globals
-    location.reload();
+    fetchLikes(index, selector);
   });
 }
+
 for (let i = 1; i <= 6; i += 1) {
   const btn = document.getElementById(`likeBtn${i}`);
   btn.addEventListener('click', () => {
-    likePlus(`Show-${i}`);
+    likePlus(`Show-${i}`, i - 1, `.likes-${i}`);
   });
 }
