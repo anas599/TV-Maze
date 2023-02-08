@@ -3,6 +3,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.hide {
+  display: none !important;
+}
+
 .navigation {
   display: flex;
   flex-direction: row;
@@ -140,6 +144,7 @@ body {
   background-color: burlywood;
   padding: 10px;
   border-radius: 5px;
+  z-index: 10;
 }
 
 .comments-list-add-comment {
