@@ -1,4 +1,4 @@
-function fetchLikes(index, selector) {
+export default function fetchLikes(index, selector) {
   fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EiwHkAoBSluksl1w8A5K/likes',
     {

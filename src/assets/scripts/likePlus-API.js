@@ -1,5 +1,5 @@
-function likePlus(itemId) {
-  fetch(
+async function likePlus(itemId) {
+  await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EiwHkAoBSluksl1w8A5K/likes',
     {
       method: 'POST',
@@ -10,10 +10,10 @@ function likePlus(itemId) {
         'Content-type': 'application/json; charset=UTF-8',
       },
     },
-  );
-  // .then((response) => response.json())
-  // .then((data) => {
-  // });
+  ).then(() => {
+    // eslint-disable-next-line no-restricted-globals
+    location.reload();
+  });
 }
 for (let i = 1; i <= 6; i += 1) {
   const btn = document.getElementById(`likeBtn${i}`);
