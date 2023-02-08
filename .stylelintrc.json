@@ -3,6 +3,7 @@
   "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
   "rules": {
     "no-missing-end-of-source-newline": null,
+    "rule-empty-line-before": null,
     "at-rule-no-unknown": [
       true,
       {
