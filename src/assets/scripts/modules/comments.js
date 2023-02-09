@@ -48,7 +48,7 @@ const showComments = async (id, modal) => {
 
     commentCount.innerText = `Comment (${countComment})`;
     commentContainer.innerHTML = '';
-    commentContainer.appendChild(fragment)
+    commentContainer.appendChild(fragment);
     return commentContainer;
   } catch (error) {
     return null;
