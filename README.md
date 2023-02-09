@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-N/A
+https://clipchamp.com/watch/tDM4BacggSq
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
