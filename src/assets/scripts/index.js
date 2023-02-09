@@ -9,6 +9,6 @@ import './likePlus-API.js';
 import logo from '../images/logo.png';
 import counter from './Counter.js';
 
-const imgLogo = document.querySelector('.logo')
+const imgLogo = document.querySelector('.logo');
 imgLogo.src = logo;
 counter();
