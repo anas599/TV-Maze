@@ -21,6 +21,15 @@ body {
   gap: 15px;
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 60px;
+}
+
 .footer-container {
   padding: 15px;
   border: 1px solid gray;
