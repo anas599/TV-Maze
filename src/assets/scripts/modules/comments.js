@@ -23,7 +23,7 @@ const getComments = async (id) => {
 
   try {
     const { data } = await axios.get(url);
-    return data;
+    return data || [];
   } catch (error) {
     return null;
   }
@@ -55,6 +55,15 @@ const showComments = async (id, modal) => {
   }
 };
 
+const add = async (url, dataStringify, config) => {
+  try {
+    const { data: response } = await axios.post(url, dataStringify, config);
+    return response;
+  } catch (error) {
+    return error;
+  }
+};
+
 const addComment = async (e, modal) => {
   e.preventDefault();
   const { form } = e.target;
@@ -68,15 +77,12 @@ const addComment = async (e, modal) => {
   const dataStringify = JSON.stringify(data);
   const endPoint = `apps/${API_ID}/comments`;
   const url = baseURL + endPoint;
-
-  try {
-    const { data: response } = await axios.post(url, dataStringify, config);
-    form.reset();
-    showComments(id, modal);
-    return response;
-  } catch (error) {
-    return error;
-  }
+  const response = await add(url, dataStringify, config);
+  showComments(id, modal);
+  form.reset();
+  return response;
 };
 
-export { addComment, showComments };
+export {
+  addComment, showComments, add, getComments,
+};
