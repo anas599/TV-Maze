@@ -65,6 +65,8 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+https://anas599.github.io/TV-Maze/dist/
+## 🎥 Video <a name="Video"></a>
 
 https://clipchamp.com/watch/tDM4BacggSq
 
