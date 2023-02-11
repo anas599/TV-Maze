@@ -352,3 +352,57 @@ textarea:focus {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+@media only screen and (max-width: 480px) {
+  .shows-list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+  .blueBtn {
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: box-shadow 0.15s, transform 0.15s;
+    font-size: 12px;
+  }
+  [id^="show-img-"] {
+    width: 40vw;
+  }
+  .shows-list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+  .logo {
+    width: 25vw;
+    margin: 15px;
+  }
+  .name-like {
+    flex-direction: column;
+  }
+  [id^="likeBtn"] {
+    font-size: 20px;
+    margin: 5px;
+  }
+  [class^="likes-"] {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .footer-container {
+    font-size: 10px;
+  }
+  .navigation {
+    flex-direction: column;
+    padding: 0;
+  }
+  .navigation > ul {
+    gap: 5vw;
+    padding: 0;
+  }
+}
