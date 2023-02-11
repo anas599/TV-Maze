@@ -3,7 +3,7 @@
 <!-- TABLE OF CONTENTS -->
 
 <div align="center">
-<img src="./src/assets/images/todo.png" alt="screenshot">
+<img src="src/assets/images/logo.png" alt="logo" width="140"  height="auto" />
 </div>
 
 # 📗 Table of Contents
